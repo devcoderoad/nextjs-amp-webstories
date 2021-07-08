@@ -1,0 +1,79 @@
+// Theme fonts
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300;400;700&family=Roboto:wght@100;300;400;500;700;900&display=swap');
+
+@import 'variables';
+@import 'bootstrap/scss/bootstrap';
+
+body {
+  background-color: $color-bg-dark-theme;
+  color: $color-dark;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.roboto {
+  font-family: 'Roboto Condensed', sans-serif;
+}
+.roboto a {
+  font-weight: 900;
+}
+
+.font-xs {
+  font-size: 0.88rem;
+}
+.font-sm {
+  font-size: 1rem;
+}
+.font-md {
+  font-size: 1.5rem;
+}
+
+.card {
+  overflow: hidden;
+  transition: transform 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55),
+    box-shadow 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  will-change: transform, box-shadow;
+  box-shadow: 23px 21px 43px -17px rgba(0, 0, 0, 0.6);
+  margin-bottom: 1rem;
+  height: 100%;
+  border-radius: 10px;
+  &:before {
+    content: '';
+    position: absolute;
+    right: -100px;
+    top: 120px;
+    bottom: -20px;
+    z-index: -1;
+    width: 420px;
+    transform: rotate(-50deg);
+    height: 420px;
+    opacity: 0.5;
+    background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAANklEQVQoU2NkIBIwEqmOgXyFU6dObQDZkp2dDaZhAMVEmCKYJLJi8hSCTCLKanwhQL6vcZkKAMbtEAuAaq67AAAAAElFTkSuQmCC');
+    background-position: top center;
+    background-repeat: repeat;
+    background-attachment: scroll;
+  }
+  &:after {
+    content: '';
+    position: absolute;
+    bottom: -20px;
+    left: -20px;
+    width: 120px;
+    height: 120px;
+    opacity: 0.5;
+    z-index: -1;
+    border-radius: 50%;
+    background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAANklEQVQoU2NkIBIwEqmOgXyFU6dObQDZkp2dDaZhAMVEmCKYJLJi8hSCTCLKanwhQL6vcZkKAMbtEAuAaq67AAAAAElFTkSuQmCC);
+    background-position: top center;
+    background-repeat: repeat;
+    background-attachment: scroll;
+  }
+  &:hover {
+    transform: translateY(-5px);
+    box-shadow: 23px 21px 43px -17px rgba(0, 0, 0, 0.75);
+  }
+}
